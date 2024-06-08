@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "Controles.Menu",
+            "vmArgs": "--module-path p:\\Instaladores\\javafx-sdk-17.0.9\\lib --add-modules javafx.controls,javafx.fxml",
+            "projectName": "Controles DatePicker y ColorPicker_4af4d460"
+        }
+    ]
+}
