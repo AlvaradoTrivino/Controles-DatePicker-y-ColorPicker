@@ -1,8 +1,8 @@
-## Getting Started
+## Controles de DatePicker y ColorPicker
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+En este proyecto muestra la utilizacion de los controles Date el cual puede seleccionar al fecha que tu desas y ColorPicker el cual puede seleccionar el color 
 
-## Folder Structure
+## Ejemplo del proyecto
 
 The workspace contains two folders by default, where:
 
