@@ -28,26 +28,44 @@ public class Menu extends Application {
     @Override
     public void start(Stage primaryStage) {
         System.out.println("Start");
-    
-        Label dateLabel = new Label("Fecha:");
+
+        // Crear los controles
+        Label dateLabel = new Label("Selecciona una fecha:");
         DatePicker datePicker = new DatePicker();
-        Label colorLabel = new Label("Seleccione el color:");
+
+        Label colorLabel = new Label("Selecciona un color:");
         ColorPicker colorPicker = new ColorPicker();
+
         Button confirmButton = new Button("Aceptar");
+
+        // Crear un HBox para alinear el botón
         HBox buttonBox = new HBox(confirmButton);
-        buttonBox.setAlignment(Pos.CENTER); 
+        buttonBox.setAlignment(Pos.CENTER); // Inicialmente centrado
+
+       
+
+        // Etiquetas para mostrar las selecciones
+        Label selectedDateLabel = new Label("Fecha seleccionada: ");
+        Label selectedColorLabel = new Label("Color seleccionado: ");
+
+        // Acción del botón de confirmación
         confirmButton.setOnAction(event -> {
-            
-            String selectedDate = datePicker.getValue().toString();
+            // Obtener la fecha y el color seleccionados
+            String selectedDate = datePicker.getValue() != null ? datePicker.getValue().toString() : "No seleccionada";
             Color selectedColor = colorPicker.getValue();
-            System.out.println("Fecha: " + selectedDate);
-            System.out.println("Color: " + selectedColor);
+
+            // Mostrar la fecha y el color en las etiquetas
+            
+            selectedDateLabel.setText("Fecha seleccionada:\n " + selectedDate);
+            selectedColorLabel.setText("Color seleccionado:\n " + selectedColor.toString());
         });
-        VBox vbox = new VBox(10, dateLabel, datePicker, colorLabel, colorPicker, buttonBox);
+
+        // Crear el layout y añadir los controles
+        VBox vbox = new VBox(10, dateLabel, datePicker, colorLabel, colorPicker, buttonBox, selectedDateLabel, selectedColorLabel);
         vbox.setSpacing(10);
 
         // Crear la escena y mostrarla
-        Scene scene = new Scene(vbox, 300, 200);
+        Scene scene = new Scene(vbox, 400, 250);
         primaryStage.setScene(scene);
         primaryStage.setTitle("DatePicker y ColorPicker");
         primaryStage.show();
