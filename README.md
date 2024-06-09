@@ -3,7 +3,7 @@
 En este proyecto muestra la utilizacion de los controles Date el cual puede seleccionar al fecha que tu desas y ColorPicker el cual puede seleccionar el color 
 
 ## Ejemplo del proyecto
-
+![Presentacion](https://github.com/AlvaradoTrivino/Controles-DatePicker-y-ColorPicker/assets/168314661/6c4cb9b5-dd22-4ceb-bd38-4b06397ddf5a)
 The workspace contains two folders by default, where:
 
 - `src`: the folder to maintain sources
